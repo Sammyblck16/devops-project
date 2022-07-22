@@ -1,0 +1,24 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  labels: 
+    app: devops-exam-project
+  name: my-project-deployment
+spec: 
+  ports: ~
+  replicas: 3
+  selector: 
+    matchLabels: 
+      app: devops-exam-project
+  template: 
+    metadata: 
+      labels: 
+        app: devops-exam-project
+    spec: 
+      containers: 
+        - 
+          image: "chimaiberi1990/devops-project:v1"
+          name: devwebpages
+
+
